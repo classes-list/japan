@@ -95,12 +95,14 @@ body{margin:0;background:var(--paper);color:var(--body);
   background:linear-gradient(to bottom,rgba(246,245,241,0),rgba(246,245,241,1))}
 .hero{position:relative;z-index:2;max-width:1140px;margin:0 auto;padding:76px 24px 64px}
 h1 .by{display:block;font-size:.52em;font-weight:400;letter-spacing:-.015em;color:var(--pine);margin-top:.14em}
+h1 .by a{color:inherit;text-decoration:none;border-bottom:2px solid rgba(47,93,78,.32);transition:border-color .15s}
+h1 .by a:hover,h1 .by a:focus-visible{border-bottom-color:var(--pine)}
 .kicker{font-family:var(--ui);font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--pine);margin:0 0 22px}
-h1{font-family:var(--display);font-weight:700;font-size:clamp(46px,9vw,104px);line-height:.94;letter-spacing:-.035em;color:var(--ink);margin:0 0 26px}
-.dek{font-size:clamp(20px,2.4vw,26px);line-height:1.5;color:var(--body);max-width:42ch;margin:0 0 34px}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(52px,11.5vw,132px);line-height:.94;letter-spacing:-.018em;color:var(--ink);margin:0 0 26px}
+.dek{font-size:clamp(20px,2.4vw,26px);line-height:1.5;color:var(--body);max-width:56ch;margin:0 0 26px}
 .chain{font-family:var(--ui);font-size:16px;line-height:2;color:var(--muted);max-width:60ch;margin:0}
 .chain b{color:var(--ink);font-weight:600}
-.stats{display:flex;flex-wrap:wrap;gap:18px 40px;margin:38px 0 0;padding-top:28px;border-top:2px solid var(--ink)}
+.stats{display:flex;flex-wrap:wrap;gap:14px 40px;margin:0 0 30px;padding:0;border:0}
 .stat dt{font-family:var(--ui);font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 5px}
 .stat dd{font-family:var(--display);font-weight:600;font-size:30px;color:var(--ink);margin:0;line-height:1}
 .hero-map{margin-top:44px;max-width:520px}
@@ -182,6 +184,29 @@ a:focus-visible{outline:3px solid var(--pine);outline-offset:3px}
 .guides-head h2{font-family:var(--display);font-weight:600;font-size:clamp(30px,4.6vw,46px);line-height:1.08;letter-spacing:-.025em;color:var(--ink);margin:0 0 8px}
 .guides-head p{font-size:19px;color:var(--muted);max-width:60ch;margin:0}
 .backlink{max-width:1140px;margin:0 auto;padding:0 24px 70px}
+.spot{font-weight:600;color:var(--ink);text-decoration:none;
+  border-bottom:1.5px solid var(--pine);padding-bottom:1px;transition:color .15s,background .15s}
+.spot:hover,.spot:focus-visible{color:var(--pine)}
+.spot::after{content:"↗";font-size:.72em;vertical-align:super;margin-left:2px;color:var(--pine);border:0}
+.stops li.fig-li{padding-left:24px;margin:14px 0 18px;list-style:none}
+.stops li.fig-li::before{display:none}
+.spot-fig{margin:0;max-width:620px}
+.spot-fig img{width:100%;display:block;border-radius:8px;border:1px solid var(--rule)}
+.spot-fig figcaption{margin-top:8px;font-family:var(--ui);font-size:14px;color:var(--muted)}
+.spot-info{font-family:var(--ui);font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--muted);text-decoration:none;border:1px solid var(--rule);border-radius:3px;
+  padding:1px 5px;margin-left:7px;vertical-align:2px;white-space:nowrap;transition:color .15s,border-color .15s}
+.spot-info:hover,.spot-info:focus-visible{color:var(--pine);border-color:var(--pine)}
+.route-map{margin:22px 0 0;max-width:640px}
+.route-map img{width:100%;display:block;border-radius:8px;border:1px solid var(--rule)}
+.route-map figcaption{margin-top:8px;font-family:var(--ui);font-size:14px;color:var(--muted)}
+.trip-map{margin:40px 0 0;max-width:520px}
+.trip-map img{width:100%;display:block;border-radius:8px;border:1px solid var(--rule)}
+.trip-map a{display:inline-block;margin-top:12px;font-family:var(--ui);font-size:15px;font-weight:600;color:var(--pine)}
+.inn-gallery{display:grid;gap:14px;margin:20px 0 0;max-width:640px}
+.inn-gallery img{width:100%;display:block;border-radius:8px;border:1px solid var(--rule)}
+.inn-shot{margin:0 0 16px;max-width:620px}
+.inn-shot img{width:100%;display:block;border-radius:8px;border:1px solid var(--rule);aspect-ratio:3/2;object-fit:cover;background:var(--card)}
 .backlink a{font-family:var(--ui);font-size:16px;font-weight:600;color:var(--pine)}
 </style>
 </head>
@@ -273,7 +298,7 @@ a:focus-visible{outline:3px solid var(--pine);outline-offset:3px}
 
     <article class="bike">
       <p class="bike-role">Solo</p>
-      <h3 class="bike-name">Dodi</h3>
+      <h3 class="bike-name">Dobi</h3>
       <p class="bike-model">2023 BMW F 750 GS</p>
       <dl>
         <div class="spec"><dt>Riders</dt><dd>1</dd></div>
