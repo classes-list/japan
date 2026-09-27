@@ -251,6 +251,15 @@ table.wx-days{min-width:960px}
 @media(max-width:700px){
   .rung{grid-template-columns:104px 92px;gap:14px}
 }
+
+.rung{grid-template-columns:112px 118px 1fr}
+.rung-head{background:#FBFAF7;padding-top:12px;padding-bottom:12px}
+.rung-head span{font-family:var(--ui);font-size:14px;font-weight:600;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--muted);line-height:1.3}
+@media(max-width:700px){
+  .rung{grid-template-columns:104px 96px}
+  .rung-head span:last-child{grid-column:1/-1;margin-top:2px}
+}
 </style>
 </head>
 <body>
@@ -333,11 +342,12 @@ table.wx-days{min-width:960px}
   <p class="grp">The altitude ladder</p>
   <p class="prose">What to subtract from the valley forecast, before wind.</p>
   <div class="ladder">
-    <div class="rung"><span class="rung-alt">300 m<span class="rung-i">1,000 ft</span></span><span class="rung-d">−2 °C<span class="rung-i">−4 °F</span></span><span class="rung-note">Naruko, Shizukuishi, most basin towns</span></div>
-    <div class="rung"><span class="rung-alt">700 m<span class="rung-i">2,300 ft</span></span><span class="rung-d">−4.5 °C<span class="rung-i">−8 °F</span></span><span class="rung-note">Shima Onsen, Yunishigawa, Ōuchi-juku</span></div>
-    <div class="rung"><span class="rung-alt">1,100 m<span class="rung-i">3,600 ft</span></span><span class="rung-d">−7 °C<span class="rung-i">−13 °F</span></span><span class="rung-note">The Mikuni crossing on Route 17</span></div>
-    <div class="rung"><span class="rung-alt">1,500 m<span class="rung-i">4,900 ft</span></span><span class="rung-d">−10 °C<span class="rung-i">−18 °F</span></span><span class="rung-note">Hachimantai plateau roads</span></div>
-    <div class="rung"><span class="rung-alt">1,800 m<span class="rung-i">5,900 ft</span></span><span class="rung-d">−12 °C<span class="rung-i">−22 °F</span></span><span class="rung-note">High Zaō, if you go up to the crater</span></div>
+    <div class="rung rung-head"><span>Elevation</span><span>Cooler by</span><span>Where on your route</span></div>
+    <div class="rung"><span class="rung-alt">300 m<span class="rung-i">1,000 ft</span></span><span class="rung-d">2 °C<span class="rung-i">4 °F</span></span><span class="rung-note">Naruko, Shizukuishi, most basin towns</span></div>
+    <div class="rung"><span class="rung-alt">700 m<span class="rung-i">2,300 ft</span></span><span class="rung-d">4.5 °C<span class="rung-i">8 °F</span></span><span class="rung-note">Shima Onsen, Yunishigawa, Ōuchi-juku</span></div>
+    <div class="rung"><span class="rung-alt">1,100 m<span class="rung-i">3,600 ft</span></span><span class="rung-d">7 °C<span class="rung-i">13 °F</span></span><span class="rung-note">The Mikuni crossing on Route 17</span></div>
+    <div class="rung"><span class="rung-alt">1,500 m<span class="rung-i">4,900 ft</span></span><span class="rung-d">10 °C<span class="rung-i">18 °F</span></span><span class="rung-note">Hachimantai plateau roads</span></div>
+    <div class="rung"><span class="rung-alt">1,800 m<span class="rung-i">5,900 ft</span></span><span class="rung-d">12 °C<span class="rung-i">22 °F</span></span><span class="rung-note">High Zaō, if you go up to the crater</span></div>
   </div>
   <p class="prose fine">Rounded from the standard lapse rate of 6.5 °C per 1,000 m (3.6 °F per 1,000 ft). <b>These are differences, not temperatures</b> — a 6 °C drop is an 11 °F drop, not a drop to 11 °F. Real mountains vary: a clear, still dawn can be much colder in a valley bottom than the rule suggests, because cold air pools there overnight.</p>
 
@@ -368,21 +378,21 @@ table.wx-days{min-width:960px}
   <table class="wx wx-days">
     <thead><tr><th>Date</th><th>Leg</th><th>Valley high / low</th><th>High ground</th><th>Coldest it will feel</th></tr></thead>
     <tbody>
-      <tr><td class="wx-d">Mon 10/5</td><td>Tokyo → Shima Onsen<span class="wx-km">190 km (118 mi)</span></td><td>21 / 14 → 16 / 9 °C<span class="wx-f">70 / 57 → 61 / 48 °F</span></td><td>Climbing to ~700 m<span class="wx-f">~2,300 ft</span></td><td class="wx-c">~9 °C (48 °F) arriving late</td></tr>
-      <tr class="wx-flag"><td class="wx-d">Tue 10/6</td><td>Shima Onsen → Sanjo<span class="wx-km">215 km (134 mi)</span></td><td>16 / 9 → 20 / 12 °C<span class="wx-f">61 / 48 → 68 / 54 °F</span></td><td><b>~1,100 m</b> Mikuni crossing<span class="wx-f">~3,600 ft</span></td><td class="wx-c"><b>~4 °C (39 °F) air, feels near freezing</b></td></tr>
-      <tr><td class="wx-d">Wed 10/7</td><td>Sanjo → Zaō (Kaminoyama)<span class="wx-km">230 km (143 mi)</span></td><td>20 / 12 → 19 / 10 °C<span class="wx-f">68 / 54 → 66 / 50 °F</span></td><td>Sea level to basin; Zaō towers above</td><td class="wx-c">~10 °C (50 °F) at dawn</td></tr>
-      <tr><td class="wx-d">Thu 10/8</td><td>Zaō → Nikaho Onsen<span class="wx-km">230 km (143 mi)</span></td><td>19 / 10 → 19 / 11 °C<span class="wx-f">66 / 50 → 66 / 52 °F</span></td><td>Basin to Sea of Japan coast</td><td class="wx-c">~10 °C (50 °F) at dawn</td></tr>
-      <tr><td class="wx-d">Fri 10/9</td><td>Nikaho → Iwate (Shizukuishi)<span class="wx-km">220 km (137 mi)</span></td><td>19 / 11 → 16 / 8 °C<span class="wx-f">66 / 52 → 61 / 46 °F</span></td><td>Over the Ōu range, ~600–800 m<span class="wx-f">~2,000–2,600 ft</span></td><td class="wx-c">~5 °C (41 °F) on the tops</td></tr>
-      <tr class="wx-flag"><td class="wx-d">Sat 10/10</td><td>Golf — Hachimantai CC<span class="wx-km">no riding</span></td><td>16 / 8 °C<span class="wx-f">61 / 46 °F</span></td><td>Foothills, 8:59 tee</td><td class="wx-c"><b>~8 °C (46 °F) on the first tee</b></td></tr>
-      <tr><td class="wx-d">Sun 10/11</td><td>Shizukuishi → Naruko Onsen<span class="wx-km">200 km (124 mi)</span></td><td>16 / 8 → 18 / 9 °C<span class="wx-f">61 / 46 → 64 / 48 °F</span></td><td>Naruko Gorge, ~300 m<span class="wx-f">~1,000 ft</span></td><td class="wx-c">~8 °C (46 °F) at dawn</td></tr>
-      <tr><td class="wx-d">Mon 10/12</td><td>Naruko → Kaminoyama Onsen<span class="wx-km">130 km (81 mi)</span></td><td>18 / 9 → 19 / 10 °C<span class="wx-f">64 / 48 → 66 / 50 °F</span></td><td>Shortest day, back roads</td><td class="wx-c">~9 °C (48 °F) at dawn</td></tr>
-      <tr><td class="wx-d">Tue 10/13</td><td>Kaminoyama → Aizu<span class="wx-km">230 km (143 mi)</span></td><td>19 / 10 → 19 / 9 °C<span class="wx-f">66 / 50 → 66 / 48 °F</span></td><td>Rolling, some 600 m ground<span class="wx-f">~2,000 ft</span></td><td class="wx-c">~6 °C (43 °F) on the tops</td></tr>
-      <tr><td class="wx-d">Wed 10/14</td><td>Aizu → Yunishigawa Onsen<span class="wx-km">150 km (93 mi)</span></td><td>19 / 9 → 15 / 7 °C<span class="wx-f">66 / 48 → 59 / 45 °F</span></td><td>Ōuchi-juku ~650 m, inn at ~700 m<span class="wx-f">~2,100 ft / ~2,300 ft</span></td><td class="wx-c">~7 °C (45 °F) arriving</td></tr>
-      <tr class="wx-flag"><td class="wx-d">Thu 10/15</td><td>Yunishigawa → Tokyo<span class="wx-km">220 km (137 mi)</span></td><td>15 / 7 → 21 / 14 °C<span class="wx-f">59 / 45 → 70 / 57 °F</span></td><td>~700 m down to sea level<span class="wx-f">~2,300 ft</span></td><td class="wx-c"><b>~7 °C (45 °F) start, 21 °C (70 °F) finish</b></td></tr>
+      <tr><td class="wx-d">Mon 10/5</td><td>Tokyo → Shima Onsen<span class="wx-km">190 km (118 mi)</span></td><td>21 / 14 → 16 / 9 °C<span class="wx-f">70 / 57 → 61 / 48 °F</span></td><td>Climbing to 700 m<span class="wx-f">2,300 ft</span></td><td class="wx-c">9 °C (48 °F) arriving late</td></tr>
+      <tr class="wx-flag"><td class="wx-d">Tue 10/6</td><td>Shima Onsen → Sanjo<span class="wx-km">215 km (134 mi)</span></td><td>16 / 9 → 20 / 12 °C<span class="wx-f">61 / 48 → 68 / 54 °F</span></td><td><b>1,100 m</b> Mikuni crossing<span class="wx-f">3,600 ft</span></td><td class="wx-c"><b>4 °C (39 °F) air, feels near freezing</b></td></tr>
+      <tr><td class="wx-d">Wed 10/7</td><td>Sanjo → Zaō (Kaminoyama)<span class="wx-km">230 km (143 mi)</span></td><td>20 / 12 → 19 / 10 °C<span class="wx-f">68 / 54 → 66 / 50 °F</span></td><td>Sea level to basin; Zaō towers above</td><td class="wx-c">10 °C (50 °F) at dawn</td></tr>
+      <tr><td class="wx-d">Thu 10/8</td><td>Zaō → Nikaho Onsen<span class="wx-km">230 km (143 mi)</span></td><td>19 / 10 → 19 / 11 °C<span class="wx-f">66 / 50 → 66 / 52 °F</span></td><td>Basin to Sea of Japan coast</td><td class="wx-c">10 °C (50 °F) at dawn</td></tr>
+      <tr><td class="wx-d">Fri 10/9</td><td>Nikaho → Iwate (Shizukuishi)<span class="wx-km">220 km (137 mi)</span></td><td>19 / 11 → 16 / 8 °C<span class="wx-f">66 / 52 → 61 / 46 °F</span></td><td>Over the Ōu range, 600–800 m<span class="wx-f">2,000–2,600 ft</span></td><td class="wx-c">5 °C (41 °F) on the tops</td></tr>
+      <tr class="wx-flag"><td class="wx-d">Sat 10/10</td><td>Golf — Hachimantai CC<span class="wx-km">no riding</span></td><td>16 / 8 °C<span class="wx-f">61 / 46 °F</span></td><td>Foothills, 8:59 tee</td><td class="wx-c"><b>8 °C (46 °F) on the first tee</b></td></tr>
+      <tr><td class="wx-d">Sun 10/11</td><td>Shizukuishi → Naruko Onsen<span class="wx-km">200 km (124 mi)</span></td><td>16 / 8 → 18 / 9 °C<span class="wx-f">61 / 46 → 64 / 48 °F</span></td><td>Naruko Gorge, 300 m<span class="wx-f">1,000 ft</span></td><td class="wx-c">8 °C (46 °F) at dawn</td></tr>
+      <tr><td class="wx-d">Mon 10/12</td><td>Naruko → Kaminoyama Onsen<span class="wx-km">130 km (81 mi)</span></td><td>18 / 9 → 19 / 10 °C<span class="wx-f">64 / 48 → 66 / 50 °F</span></td><td>Shortest day, back roads</td><td class="wx-c">9 °C (48 °F) at dawn</td></tr>
+      <tr><td class="wx-d">Tue 10/13</td><td>Kaminoyama → Aizu<span class="wx-km">230 km (143 mi)</span></td><td>19 / 10 → 19 / 9 °C<span class="wx-f">66 / 50 → 66 / 48 °F</span></td><td>Rolling, some 600 m ground<span class="wx-f">2,000 ft</span></td><td class="wx-c">6 °C (43 °F) on the tops</td></tr>
+      <tr><td class="wx-d">Wed 10/14</td><td>Aizu → Yunishigawa Onsen<span class="wx-km">150 km (93 mi)</span></td><td>19 / 9 → 15 / 7 °C<span class="wx-f">66 / 48 → 59 / 45 °F</span></td><td>Ōuchi-juku 650 m, inn at 700 m<span class="wx-f">2,100 ft / 2,300 ft</span></td><td class="wx-c">7 °C (45 °F) arriving</td></tr>
+      <tr class="wx-flag"><td class="wx-d">Thu 10/15</td><td>Yunishigawa → Tokyo<span class="wx-km">220 km (137 mi)</span></td><td>15 / 7 → 21 / 14 °C<span class="wx-f">59 / 45 → 70 / 57 °F</span></td><td>700 m down to sea level<span class="wx-f">2,300 ft</span></td><td class="wx-c"><b>7 °C (45 °F) start, 21 °C (70 °F) finish</b></td></tr>
     </tbody>
   </table>
   </div>
-  <p class="prose fine">Three days do the work: <b>10/6</b> is the coldest riding of the trip, <b>10/10</b> is the coldest standing still, and <b>10/15</b> swings 14 °C (25 °F) from first gear to the hotel. Everything else is a jacket-liner decision, not a problem.</p>
+  <p class="prose fine">Temperatures and elevations in the table are approximate. Three days do the work: <b>10/6</b> is the coldest riding of the trip, <b>10/10</b> is the coldest standing still, and <b>10/15</b> swings 14 °C (25 °F) from first gear to the hotel. Everything else is a jacket-liner decision, not a problem.</p>
 
   <aside class="note">
     <p class="note-tag">Typhoons</p>
