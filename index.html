@@ -27,7 +27,7 @@
   --jp:'Noto Sans JP','Hiragino Sans','Yu Gothic',sans-serif;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:70px}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 body{margin:0;background:var(--paper);color:var(--body);
   font-family:var(--text);font-size:19px;line-height:1.72;-webkit-font-smoothing:antialiased}
@@ -283,10 +283,20 @@ a.dl-link:hover,a.dl-link:focus-visible{background:var(--ochre-bg)}
 
 .block > figure + figure{margin-top:20px}
 .stops li.fig-li + li.fig-li{margin-top:18px}
+
+.nav{gap:5px;align-items:center}
+.nav-day{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;padding:5px 9px;border:1px solid var(--rule);border-radius:4px;text-decoration:none;line-height:1.08;transition:background .15s,border-color .15s}
+.nav-day .nd-n{font-family:var(--ui);font-weight:700;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.nav-day .nd-d{font-family:var(--mono);font-size:14px;color:var(--ink);white-space:nowrap}
+.nav-day:hover,.nav-day:focus-visible{background:var(--pine);border-color:var(--pine)}
+.nav-day:hover .nd-n,.nav-day:hover .nd-d,.nav-day:focus-visible .nd-n,.nav-day:focus-visible .nd-d{color:#fff}
+.nav-day.is-today{background:#FAEFB8;border-color:var(--ochre)}
+.nav-day.is-today .nd-n{color:var(--ochre)}
+@media (max-width:640px){.nav-day{padding:4px 7px}.nav-day .nd-n{font-size:9px}.nav-day .nd-d{font-size:13px}}
 </style>
 </head>
 <body>
-<div class="topbar"><div class="topbar-in"><span class="brand">Japan 2026</span><nav class="nav" aria-label="Sections"><a class="nav-chip" href="#d1">10/4</a><a class="nav-chip" href="#d2">10/5</a><a class="nav-chip" href="#d3">10/6</a><a class="nav-chip" href="#d4">10/7</a><a class="nav-chip" href="#d5">10/8</a><a class="nav-chip" href="#d6">10/9</a><a class="nav-chip" href="#d7">10/10</a><a class="nav-chip" href="#d8">10/11</a><a class="nav-chip" href="#d9">10/12</a><a class="nav-chip" href="#d10">10/13</a><a class="nav-chip" href="#d11">10/14</a><a class="nav-chip" href="#d12">10/15</a><a class="nav-chip" href="#d13">10/16</a><a class="nav-chip" href="#d14">10/17</a><span class="nav-sep"></span><a class="nav-chip nav-page" href="bikes.html">Bikes</a><a class="nav-chip nav-page" href="signs.html">Road signs</a><a class="nav-chip nav-page" href="riding-left.html">Riding on the left</a><a class="nav-chip nav-page" href="phrases.html">Phrases</a><a class="nav-chip nav-page" href="weather.html">Weather &amp; packing</a></nav></div></div>
+<div class="topbar"><div class="topbar-in"><span class="brand">Japan 2026</span><nav class="nav" aria-label="Sections"><a class="nav-day" href="#d1" data-date="2026-10-04"><span class="nd-n">Arrive</span><span class="nd-d">10/4</span></a><a class="nav-day" href="#d2" data-date="2026-10-05"><span class="nd-n">Day 1</span><span class="nd-d">10/5</span></a><a class="nav-day" href="#d3" data-date="2026-10-06"><span class="nd-n">Day 2</span><span class="nd-d">10/6</span></a><a class="nav-day" href="#d4" data-date="2026-10-07"><span class="nd-n">Day 3</span><span class="nd-d">10/7</span></a><a class="nav-day" href="#d5" data-date="2026-10-08"><span class="nd-n">Day 4</span><span class="nd-d">10/8</span></a><a class="nav-day" href="#d6" data-date="2026-10-09"><span class="nd-n">Day 5</span><span class="nd-d">10/9</span></a><a class="nav-day" href="#d7" data-date="2026-10-10"><span class="nd-n">Rest</span><span class="nd-d">10/10</span></a><a class="nav-day" href="#d8" data-date="2026-10-11"><span class="nd-n">Day 6</span><span class="nd-d">10/11</span></a><a class="nav-day" href="#d9" data-date="2026-10-12"><span class="nd-n">Day 7</span><span class="nd-d">10/12</span></a><a class="nav-day" href="#d10" data-date="2026-10-13"><span class="nd-n">Day 8</span><span class="nd-d">10/13</span></a><a class="nav-day" href="#d11" data-date="2026-10-14"><span class="nd-n">Day 9</span><span class="nd-d">10/14</span></a><a class="nav-day" href="#d12" data-date="2026-10-15"><span class="nd-n">Day 10</span><span class="nd-d">10/15</span></a><a class="nav-day" href="#d13" data-date="2026-10-16"><span class="nd-n">Tokyo</span><span class="nd-d">10/16</span></a><a class="nav-day" href="#d14" data-date="2026-10-17"><span class="nd-n">Depart</span><span class="nd-d">10/17</span></a><span class="nav-sep"></span><a class="nav-chip nav-page" href="bikes.html">Bikes</a><a class="nav-chip nav-page" href="signs.html">Road signs</a><a class="nav-chip nav-page" href="riding-left.html">Riding on the left</a><a class="nav-chip nav-page" href="phrases.html">Phrases</a><a class="nav-chip nav-page" href="weather.html">Weather &amp; packing</a></nav></div></div>
 <div class="hero-wrap">
 <svg class="hero-bg" viewBox="0 0 1440 760" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
   <defs>
@@ -556,6 +566,6 @@ a.dl-link:hover,a.dl-link:focus-visible{background:var(--ochre-bg)}
 <aside class="note"><p class="note-tag">Still to decide</p><p class="note-body">The afternoon of the 16th and the whole of this day are still open. Check-out is <b>10:00</b> and the train is at 16:20, so that is six and a half hours with the bags behind the desk &mdash; a long, free last day in Tokyo, and nothing planned into it yet.</p></aside></article></main>
 
 
-<script>(function(){try{var t=new Date().toLocaleDateString('en-CA');var r=document.querySelector('.dl-row[data-date="'+t+'"]');if(r){r.classList.add('is-today');}}catch(e){}})();</script>
+<script>(function(){try{var t=new Date().toLocaleDateString('en-CA');var r=document.querySelector('.dl-row[data-date="'+t+'"]');if(r){r.classList.add('is-today');}var n=document.querySelector('.nav-day[data-date="'+t+'"]');if(n){n.classList.add('is-today');n.scrollIntoView({block:'nearest',inline:'center'});}}catch(e){}})();</script>
 </body>
 </html>
