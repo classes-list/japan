@@ -540,6 +540,6 @@ img[width][height]{height:auto}
 <aside class="note"><p class="note-tag">Still to decide</p><p class="note-body">The afternoon of the 16th and the whole of this day are still open. Check-out is <b>10:00</b> and the train is at 16:20, so that is six and a half hours with the bags behind the desk &mdash; a long, free last day in Tokyo, and nothing planned into it yet.</p></aside></article></main>
 
 
-<script>(function(){try{var t=new Date().toLocaleDateString('en-CA');var r=document.querySelector('.dl-row[data-date="'+t+'"]');if(r){r.classList.add('is-today');}var n=document.querySelector('.nav-day[data-date="'+t+'"]');if(n){n.classList.add('is-today');n.scrollIntoView({block:'nearest',inline:'center'});}}catch(e){}})();</script>
+<script>(function(){var t='';try{var o={};new Intl.DateTimeFormat('en-US',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date()).forEach(function(x){o[x.type]=x.value;});if(o.year&&o.month&&o.day){t=o.year+'-'+o.month+'-'+o.day;}}catch(e){}if(!/^\d{4}-\d{2}-\d{2}$/.test(t)){try{var u=new Date();t=new Date(u.getTime()+(u.getTimezoneOffset()+540)*6e4).toISOString().slice(0,10);}catch(e2){return;}}try{var r=document.querySelector('.dl-row[data-date="'+t+'"]');if(r){r.classList.add('is-today');}var n=document.querySelector('.nav-day[data-date="'+t+'"]');if(n){n.classList.add('is-today');n.scrollIntoView({block:'nearest',inline:'center'});}}catch(e3){}})();</script>
 </body>
 </html>
